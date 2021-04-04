@@ -1,0 +1,1 @@
+"use strict";var menu=document.getElementById("menu"),menuButton=document.getElementById("menu-button");menuButton.addEventListener("click",(function(){menuButton.firstElementChild.classList.toggle("top-bar__icon--active"),menu.classList.toggle("navigation--active"),document.body.classList.toggle("no-scroll")}));

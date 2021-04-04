@@ -1,0 +1,115 @@
+@use "../abstracts/vars/colors" as c;
+
+.benefits{
+  display: grid;
+  grid-template-columns: minmax(min-content, 1120px);
+  justify-content: center;
+  background-color: c.$light-grayish-blue;
+  text-align: center;
+  padding: 2.5rem 1.5rem 1.5rem;
+  color: c.$grayish-blue;
+
+  @media screen and (min-width: 900px){
+    padding-top: 4rem;
+    padding-bottom: 2.5rem;
+  }
+
+  @media screen and (min-width: 1360px){
+    text-align: start;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0;
+
+    @media screen and (max-width: 768px) {
+      width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__text{
+    @media screen and (min-width: 900px){
+      width: 620px;
+    }
+
+    @media screen and (max-width: 1360px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    @media screen and (min-width: 900px) {
+      margin-top: 2.5rem;
+      max-width: 1150px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.benefits,
+.benefits-card{
+  &__title{
+    color: c.$dark-blue;
+    font-weight: 500;
+  }
+
+  &__text{
+    font-size: 0.8rem;
+    line-height: 1.5;
+
+    @media screen and (min-width: 500px){
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.benefits-card{
+  padding-top: 4rem;
+  background-repeat: no-repeat;
+  background-position: top center;
+  width: 100%;
+
+  @media screen and (min-width: 350px) {
+    width: 320px;
+  }
+
+  @media screen and (min-width: 1360px){
+    background-position: top left;
+    width: 265px;
+
+    &__text{
+      font-size: 0.9rem;
+    }
+  }
+
+  @media screen and (max-width: 1360px){
+    text-align: center;
+  }
+
+  &--online{
+    background-image: url(../../assets/img/icon-online.svg);
+  }
+
+  &--budgeting{
+    background-image: url(../../assets/img/icon-budgeting.svg);
+  }
+
+  &--onboarding{
+    background-image: url(../../assets/img/icon-onboarding.svg);
+  }
+
+  &--api{
+    background-image: url(../../assets/img/icon-api.svg);
+  }
+}

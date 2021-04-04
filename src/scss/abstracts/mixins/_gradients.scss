@@ -1,0 +1,17 @@
+@use "../vars/colors" as c;
+
+@mixin link{
+  background-image: linear-gradient(to right, c.$lime-green, c.$bright-cyan);
+  color: c.$white;
+  padding: 0.8rem 2rem;
+  border-radius: 2.5rem;
+  display: inline-block;
+
+  @media screen and (min-width: 768px) {
+    transition: background-image 0.2s;
+
+    &:hover{
+      background-image: linear-gradient(to right, lighten(c.$lime-green, 20%), lighten(c.$bright-cyan, 20%));
+    }
+  }
+}

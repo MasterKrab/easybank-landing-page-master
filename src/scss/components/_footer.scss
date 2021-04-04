@@ -1,0 +1,124 @@
+@use "../abstracts/vars/colors" as c;
+@use "../abstracts/mixins/gradients";
+
+.footer{
+  background-color: c.$dark-blue;
+  color: c.$white;
+  text-align: center;
+
+  @media screen and (min-width: 900px) {
+    text-align: end;
+  }
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+
+    @media screen and (min-width: 768px) {
+      gap: 2rem;
+      max-width: 1145px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+    }
+
+    @media screen and (min-width: 1024px){
+      padding: 3rem 1rem 2rem;
+    }
+  }
+
+  &__top{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 1024px) {
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+    }
+  }
+
+  &__bottom{
+    margin-top: 1.5rem;
+
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+      margin-top: 0;
+    }
+  }
+
+  &__link{
+    @include gradients.link;
+    margin-bottom: 1rem;
+  }
+
+  &__copyright{
+    color: c.$grayish-blue;
+    font-size: 0.9rem;
+  }
+}
+
+.social-list{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  &__image{
+    width: 25px;
+
+    @media screen and (min-width: 1024px) {
+      &__image{
+        width: 20px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &__item{
+      transition: filter 0.2s;
+
+      &:hover{
+        filter: invert(72%) sepia(54%) saturate(552%) hue-rotate(97deg) brightness(180%) contrast(84%);
+      }
+    }
+  }
+}
+
+.footer-list{
+  @media screen and (min-width: 900px) {
+    text-align: start;
+    margin-left: 50px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    margin-left: 100px;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    font-weight: 300;
+
+    @media screen and (min-width: 768px) {
+      transition: color 0.2s;
+
+      &:hover{
+        color: c.$green;
+      }
+    }
+  }
+}

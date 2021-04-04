@@ -1,0 +1,12 @@
+.main-header__container
+    .main-header__top
+        .top-bar
+            img(src="assets/img/logo.svg" alt="logo")
+            button.top-bar__button#menu-button(aria-label="Open navigation")
+                span.top-bar__icon
+        nav.navigation#menu
+            ul.menu
+                each page in pages
+                    li.menu__item: a.menu__link(href=page.url)= page.title
+
+        a.main-header__link(href="#") Request invite
