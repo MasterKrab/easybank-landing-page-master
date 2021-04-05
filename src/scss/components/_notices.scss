@@ -53,6 +53,15 @@
     width: 320px;
   }
 
+  @media screen and (min-width: 768px) {
+    transition: transform .2s, box-shadow .2s;
+
+    &:hover{
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(#000, 0.1);
+    }
+  }
+
   @media screen and (min-width: 1360px){
     width: 260px;
   }
